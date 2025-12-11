@@ -1,0 +1,16 @@
+{
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "VITE_EMAILJS_SERVICE_ID",
+      "value": "your_key"
+    },
+    {
+      "environmentVariable": "VITE_EMAILJS_TEMPLATE_ID",
+      "value": "your_key"
+    },
+    {
+      "environmentVariable": "VITE_EMAILJS_PUBLIC_KEY",
+      "value": "your_key"
+    }
+  ]
+}
