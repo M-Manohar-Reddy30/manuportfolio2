@@ -191,7 +191,7 @@ const AboutMe = () => {
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
                   KSEAB | Percentage: 85%
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2023</p>
+                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2024</p>
               </div>
             </motion.div>
 
@@ -234,9 +234,9 @@ const AboutMe = () => {
                   karnataka
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  CBSE Board | Percentage: 72%
+                  CBSE Board | Percentage: 73%
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2020</p>
+                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2022</p>
               </div>
             </motion.div>
           </div>
