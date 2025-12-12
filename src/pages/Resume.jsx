@@ -111,15 +111,15 @@ export default function Resume() {
               <span style={{ color: "#aaa" }}>GPA: 8.2</span>
             </li>
             <li style={{ marginTop: 8 }}>
-              <strong>12th Board - PCMC</strong> — Narayana PU College, Ballari, Karnataka (KSEAB, 2023)
+              <strong>12th Board - PCMC</strong> — Narayana PU College, Ballari, Karnataka (KSEAB, 2024)
               <br />
 
               <span style={{ color: "#aaa" }}>Percentage: 85%</span>
             </li>
             <li style={{ marginTop: 8 }}>
-              <strong>10th Board  - Narayana E-Techna School</strong> — Ballari, Karnataka (CBSE Board, 2020)
+              <strong>10th Board  - Narayana E-Techna School</strong> — Ballari, Karnataka (CBSE Board, 2022)
               <br />
-              <span style={{ color: "#aaa" }}>Percentage: 72%</span>
+              <span style={{ color: "#aaa" }}>Percentage: 73%</span>
             </li>
           </ul>
         </motion.div>
