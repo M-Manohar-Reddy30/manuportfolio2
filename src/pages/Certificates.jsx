@@ -28,8 +28,8 @@ const CERTS = {
       link: "/certs/dohmedia.jpgg",
     },
     {
-      title: "bugbuzz",
-      org: "SCET tech fest",
+      title: "Directorate Of SRMIST Hostels (DOH)",
+      org: "Sports",
       date: "2025",
       img: "/certs/dohsports.jpg",
       link: "/certs/dohsports.jpg",
