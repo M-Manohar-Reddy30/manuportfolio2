@@ -186,7 +186,7 @@ const AboutMe = () => {
                     marginBottom: "0.2rem",
                   }}
                 >
-                  <strong>Rarayana pu college</strong> — Ballari, karnataka              
+                  <strong>Narayana pu college</strong> — Ballari, karnataka              
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
                   KSEAB | Percentage: 85%
@@ -230,7 +230,7 @@ const AboutMe = () => {
                     marginBottom: "0.2rem",
                   }}
                 >
-                  <strong>Rarayan E-Techno School</strong> — Ballari,
+                  <strong>Narayan E-Techno School</strong> — Ballari,
                   karnataka
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
