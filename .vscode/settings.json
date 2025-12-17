@@ -2,15 +2,15 @@
   "maven.terminal.customEnv": [
     {
       "environmentVariable": "VITE_EMAILJS_SERVICE_ID",
-      "value": "your_key"
+      "value": "service_ueazy7s"
     },
     {
       "environmentVariable": "VITE_EMAILJS_TEMPLATE_ID",
-      "value": "your_key"
+      "value": "template_ieddroq"
     },
     {
       "environmentVariable": "VITE_EMAILJS_PUBLIC_KEY",
-      "value": "your_key"
+      "value": "E0ANER-s0w2kiDLaW"
     }
   ]
 }
