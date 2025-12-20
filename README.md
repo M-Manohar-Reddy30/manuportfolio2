@@ -1,4 +1,4 @@
-ManuPortfolio2
+🚀 ManuPortfolio2
 
 Next-level personal portfolio website built with modern web tech to present projects, skills, and contact info — live at: https://manuportfolio2.vercel.app
  🌐
@@ -21,3 +21,21 @@ The website showcases:
 
 Perfect for landing internships, jobs, and freelance gigs.
 
+🛠️ Built With
+
+Core tools & tech:
+
+Tech	Purpose
+Vite	Superfast frontend tooling
+React	UI library
+HTML/CSS/JS	Core web stack
+Vercel	Deployment platform
+Responsive Design	Mobile + desktop friendliness
+🎯 Features
+
+✔ Clean, modern UI
+✔ Fully responsive
+✔ Live deployment
+✔ Easy to customize
+✔ Project showcase sections
+✔ Contact & social links
