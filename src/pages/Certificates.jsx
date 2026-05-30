@@ -1,184 +1,342 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import "../CSS/Certificates.css";
 
-// ✅ Certificates data (added URLs for View button)
 const CERTS = {
   tech: [
     {
-      title: "Apna College",
-      org: "Full stack Development",
+      title: "Full Stack Development",
+      org: "Apna College",
       date: "2025",
       img: "/certs/apna.png",
-      link: "/certs/apna.png",
+      verified: true,
+      level: "Professional",
+      skills: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "JavaScript"
+      ]
     },
+
     {
-      title: "Apna College",
-      org: "DSA ",
+      title: "Data Structures & Algorithms",
+      org: "Apna College",
       date: "2025",
-      img: "/certs/apna.png",
-      link: "/certs/apna.png",
-    },
+      img: "/certs/DSA_with_Java.png",
+      verified: true,
+      level: "Professional",
+      skills: [
+        "Java",
+        "DSA",
+        "Algorithms",
+        "Problem Solving"
+      ]
+    }
   ],
+
   other: [
     {
-      title: "Directorate Of SRMIST Hostels (DOH)",
-      org: "Media",
+      title: "Media Coordinator",
+      org: "Directorate Of SRMIST Hostels",
       date: "2024",
       img: "/certs/dohmedia.jpg",
-      link: "/certs/dohmedia.jpgg",
+      verified: true,
+      level: "Leadership",
+      skills: [
+        "Leadership",
+        "Media",
+        "Event Management"
+      ]
     },
+
     {
-      title: "Directorate Of SRMIST Hostels (DOH)",
-      org: "Sports",
+      title: "Sports Coordinator",
+      org: "Directorate Of SRMIST Hostels",
       date: "2025",
       img: "/certs/dohsports.jpg",
-      link: "/certs/dohsports.jpg",
-    },
-  ],
+      verified: true,
+      level: "Leadership",
+      skills: [
+        "Sports",
+        "Teamwork",
+        "Leadership"
+      ]
+    }
+  ]
 };
 
 export default function Certificates() {
   const [tab, setTab] = useState("tech");
   const [selectedCert, setSelectedCert] = useState(null);
 
+  const totalCerts =
+    CERTS.tech.length +
+    CERTS.other.length;
+
   return (
-    <section className="container" style={{ padding: "40px 0" }}>
-      <div className="card" style={{ background: "#111", borderRadius: 12, padding: 24 }}>
-        <h2 style={{ fontSize: "1.8rem", color: "#fff", marginBottom: 4 }}>Certificates 🏅</h2>
-        <p className="lead" style={{ color: "#aaa" }}>
-          Explore my certifications — technical & non-technical.
-        </p>
+  <section className="certificates-page">
 
-        {/* Tabs */}
-        <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
-          {["tech", "other"].map((t) => (
-            <button
-              key={t}
-              onClick={() => setTab(t)}
-              className={tab === t ? "tab active" : "tab"}
-              style={{
-                padding: "8px 18px",
-                borderRadius: 8,
-                border: "none",
-                cursor: "pointer",
-                background: tab === t ? "#007bff" : "#333",
-                color: "#fff",
-                fontWeight: 500,
-                transition: "0.3s",
-              }}
-            >
-              {t === "tech" ? "Tech" : "Others"}
-            </button>
-          ))}
-        </div>
+    {/* Background Effects */}
 
-        {/* Certificates Grid */}
-        <div
-          className="certs-grid"
-          style={{
-            marginTop: 28,
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: 20,
-          }}
-        >
-          <AnimatePresence mode="wait">
-            {CERTS[tab].map((c, idx) => (
-              <motion.div
-                key={c.title}
-                className="cert card"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                whileHover={{
-                  scale: 1.03,
-                  boxShadow: "0 0 15px rgba(0, 123, 255, 0.4)",
-                }}
-                style={{
-                  background: "#1a1a1a",
-                  borderRadius: 12,
-                  padding: 16,
-                  color: "#fff",
-                }}
-              >
-                <img
-                  src={c.img}
-                  alt={c.title}
-                  style={{
-                    width: "100%",
-                    height: 160,
-                    borderRadius: 10,
-                    objectFit: "cover",
-                    marginBottom: 12,
-                  }}
-                />
-                <strong style={{ fontSize: 16 }}>{c.title}</strong>
-                <div className="muted" style={{ fontSize: 13, color: "#bbb" }}>
-                  {c.org} • {c.date}
-                </div>
+    <div className="cert-bg-orb orb-1"></div>
+    <div className="cert-bg-orb orb-2"></div>
+    <div className="cert-bg-orb orb-3"></div>
 
-                <div style={{ marginTop: 12 }}>
-                  <button
-                    className="btn"
-                    onClick={() => setSelectedCert(c)}
-                    style={{
-                      background: "#007bff",
-                      border: "none",
-                      color: "white",
-                      borderRadius: 6,
-                      padding: "6px 14px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    View
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
-      </div>
+    <motion.div
+      className="cert-hero"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
 
-      {/* Modal Preview */}
-      <AnimatePresence>
-        {selectedCert && (
+      <h1>
+        Certifications &
+        <span> Achievements</span>
+      </h1>
+
+      <p>
+        A showcase of my professional
+        certifications, technical learning,
+        leadership achievements and
+        continuous growth journey.
+      </p>
+
+    </motion.div>
+
+    {/* Statistics */}
+
+    <div className="cert-stats">
+
+      <motion.div
+        className="stat-card"
+        whileHover={{ y: -8 }}
+      >
+        <h2>{totalCerts}+</h2>
+        <span>Certificates</span>
+      </motion.div>
+
+      <motion.div
+        className="stat-card"
+        whileHover={{ y: -8 }}
+      >
+        <h2>AI / ML</h2>
+        <span>Specialization</span>
+      </motion.div>
+
+      <motion.div
+        className="stat-card"
+        whileHover={{ y: -8 }}
+      >
+        <h2>Full Stack</h2>
+        <span>Development</span>
+      </motion.div>
+
+
+    </div>
+
+    {/* Tabs */}
+
+    <div className="cert-tabs">
+
+      <button
+        onClick={() => setTab("tech")}
+        className={
+          tab === "tech"
+            ? "cert-tab active"
+            : "cert-tab"
+        }
+      >
+        Tech Certifications
+      </button>
+
+      <button
+        onClick={() => setTab("other")}
+        className={
+          tab === "other"
+            ? "cert-tab active"
+            : "cert-tab"
+        }
+      >
+        Leadership & Activities
+      </button>
+
+    </div>
+
+    {/* Grid */}
+
+    <div className="cert-grid">
+
+      <AnimatePresence mode="wait">
+
+        {CERTS[tab].map((cert, idx) => (
           <motion.div
-            className="modal"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: "rgba(0,0,0,0.8)",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              zIndex: 1000,
+            key={cert.title}
+            className="premium-cert-card"
+            initial={{
+              opacity: 0,
+              y: 30
             }}
-            onClick={() => setSelectedCert(null)}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
+            exit={{
+              opacity: 0,
+              y: -20
+            }}
+            transition={{
+              delay: idx * 0.1
+            }}
+            whileHover={{
+              y: -12
+            }}
           >
-            <motion.img
+                        <div className="cert-image-wrapper">
+
+              <img
+                src={cert.img}
+                alt={cert.title}
+                className="cert-image"
+              />
+
+              <div className="cert-overlay">
+                <button
+                  className="preview-btn"
+                  onClick={() =>
+                    setSelectedCert(cert)
+                  }
+                >
+                  View Certificate
+                </button>
+              </div>
+
+            </div>
+
+            <div className="cert-content">
+
+              <div className="verified-badge">
+                ✓ Verified Credential
+              </div>
+
+              <h3>
+                {cert.title}
+              </h3>
+
+              <p className="cert-org">
+                {cert.org}
+              </p>
+
+              <div className="cert-meta">
+
+                <span>
+                  📅 {cert.date}
+                </span>
+
+                <span>
+                  🎖 {cert.level}
+                </span>
+
+              </div>
+
+              <div className="skills-container">
+
+                {cert.skills.map(
+                  (skill, index) => (
+                    <span
+                      key={index}
+                      className="skill-pill"
+                    >
+                      {skill}
+                    </span>
+                  )
+                )}
+
+              </div>
+
+            </div>
+
+          </motion.div>
+        ))}
+
+      </AnimatePresence>
+
+    </div>
+
+    {/* Modal */}
+
+    <AnimatePresence>
+
+      {selectedCert && (
+
+        <motion.div
+          className="cert-modal"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() =>
+            setSelectedCert(null)
+          }
+        >
+
+          <motion.div
+            className="cert-modal-content"
+            initial={{
+              scale: 0.8,
+              opacity: 0
+            }}
+            animate={{
+              scale: 1,
+              opacity: 1
+            }}
+            exit={{
+              scale: 0.8,
+              opacity: 0
+            }}
+            onClick={(e) =>
+              e.stopPropagation()
+            }
+          >
+
+            <button
+              className="close-btn"
+              onClick={() =>
+                setSelectedCert(null)
+              }
+            >
+              ✕
+            </button>
+
+            <img
               src={selectedCert.img}
               alt={selectedCert.title}
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              style={{
-                maxWidth: "90%",
-                maxHeight: "85%",
-                borderRadius: 10,
-                boxShadow: "0 0 25px rgba(255,255,255,0.2)",
-              }}
-              onClick={(e) => e.stopPropagation()}
+              className="modal-image"
             />
+
+            <div className="modal-info">
+
+              <h2>
+                {selectedCert.title}
+              </h2>
+
+              <p>
+                {selectedCert.org}
+              </p>
+
+              <span>
+                Issued: {selectedCert.date}
+              </span>
+
+            </div>
+
           </motion.div>
-        )}
-      </AnimatePresence>
-    </section>
-  );
+
+        </motion.div>
+
+      )}
+
+    </AnimatePresence>
+
+  </section>
+);
 }
