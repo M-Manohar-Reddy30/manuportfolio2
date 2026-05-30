@@ -1,61 +1,186 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "./Skills.css";
+import CountUp from "react-countup";
+import "../CSS/Skills.css";
 
-const ROWS = [
-  [
-    { title: "Programming Languages", items: ["Python", "C", "C++", "Java"] },
-    { title: "Web Technologies", items: ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "API Integration", "Node.js", "Express.js", "Auth (JWT, bcrypt)", "Middleware & Routing", "REST API Design"] },
-    { title: "Databases & Tools", items: ["MySQL", "MongoDB + Mongoose", "Git"] },
-    { title: "Frameworks & Libraries", items: ["TensorFlow", "PyTorch", "OpenCV"] },
-    { title: "DevOps / Deployment", items: ["Vercel", "Netlify", "Render"] },
-    { title: "Core Concepts", items: ["Data Structures & Algorithms", "OOPs"] },
-    { title: "Soft Skills", items: ["Teamwork", "Problem Solving", "Creativity", "Adaptability", "Communication"] },
-  ],
+const stats = [
+  { number: 15, suffix: "+", label: "Technologies" },
+  { number: 3, suffix: "+", label: "Production Projects" },
+  { number: 8, suffix: "+", label: "Technical Domains" },
+  { number: 1, suffix: "+", label: "AI Platform Built" },
+];
+
+const techStack = [
+  "Python",
+  "Java",
+  "React",
+  "Next.js",
+  "FastAPI",
+  "Node.js",
+  "MongoDB",
+  "PostgreSQL",
+  "TensorFlow",
+  "PyTorch",
+  "OpenCV",
+  "ChromaDB",
+  "Git",
+  "GitHub",
+  "Vercel",
+  "Render",
+  "JWT",
+  "REST API",
+  "RAG",
+  "Gen AI",
+];
+
+const skillCategories = [
+  {
+    icon: "🤖",
+    title: "AI Engineering",
+    skills: [
+      "Machine Learning",
+      "Deep Learning",
+      "Computer Vision",
+      "Generative AI",
+      "Prompt Engineering",
+      "RAG Systems",
+      "LLM Integration",
+      "TensorFlow",
+      "PyTorch",
+      "OpenCV",
+    ],
+  },
+
+  {
+    icon: "⚡",
+    title: "Full Stack Development",
+    skills: [
+      "React.js",
+      "Next.js",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "REST APIs",
+      "JWT Authentication",
+    ],
+  },
+
+  {
+    icon: "🗄️",
+    title: "Database Engineering",
+    skills: [
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "SQLAlchemy",
+      "Mongoose",
+      "ChromaDB",
+      "Vector Search",
+    ],
+  },
+
+  {
+    icon: "☁️",
+    title: "Cloud & DevOps",
+    skills: [
+      "Git",
+      "GitHub",
+      "Vercel",
+      "Render",
+      "CI/CD",
+      "Deployment",
+      "Environment Management",
+    ],
+  },
 ];
 
 export default function Skills() {
   return (
-    <section className="skills-container" id="skills">
+    <section className="skills-section" id="skills">
 
-      {/* Header */}
+      <div className="skills-glow"></div>
+
       <motion.div
-        className="skills-header"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        className="skills-hero"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        <h2 className="text-5xl text-cyan-400 font-semibold mb-3">My Skills</h2>
-        <div className="w-28 h-[2px] bg-cyan-400 mx-auto mb-6"></div>
-        <p className="text-gray-400 text-lg max-w-xl mx-auto">
-          A structured list of my technical skills and core expertise.
+        <h1>TECH STACK & EXPERTISE</h1>
+
+        <p>
+          Building AI-powered applications,
+          scalable backend systems,
+          intelligent document platforms,
+          and production-ready software products.
         </p>
       </motion.div>
 
-      {/* Skills Table */}
-      <div className="skills-table">
-        {ROWS.map((row, rowIndex) => (
-          <div key={rowIndex} className="skills-row">
-            {row.map((col, colIndex) => (
-              <motion.div
-                key={col.title}
-                className="skill-box"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.6, delay: (rowIndex + colIndex) * 0.1 }}
-              >
-                <h3>{col.title}</h3>
-                <ul>
-                  {col.items.map((item, i) => (
-                    <motion.li key={i} whileHover={{ x: 6, color: "#00ffc8" }}>
-                      {item}
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
+      <div className="stats-grid">
+        {stats.map((item, index) => (
+          <motion.div
+            key={index}
+            className="stat-card"
+            whileHover={{
+              y: -10,
+              scale: 1.03,
+            }}
+          >
+            <h2>
+              <CountUp
+                end={item.number}
+                duration={2}
+              />
+              {item.suffix}
+            </h2>
+
+            <span>{item.label}</span>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="marquee">
+        <div className="marquee-track">
+          {[...techStack, ...techStack].map((item, index) => (
+            <span key={index}>{item}</span>
+          ))}
+        </div>
+      </div>
+
+      <div className="skills-grid">
+        {skillCategories.map((category, index) => (
+          <motion.div
+            key={index}
+            className="skill-card"
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.15,
+            }}
+            whileHover={{
+              y: -10,
+            }}
+          >
+            <h3>
+              {category.icon} {category.title}
+            </h3>
+
+            <div className="skill-tags">
+              {category.skills.map((skill, idx) => (
+                <span key={idx}>
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
         ))}
       </div>
 
