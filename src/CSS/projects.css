@@ -362,34 +362,201 @@
   }
 }
 
-@media (max-width: 1000px) {
+/* ========================= */
+/* TABLETS */
+/* ========================= */
+
+@media (max-width: 1024px) {
+
+  .projects-section {
+    padding: 70px 4%;
+  }
 
   .featured-project {
     grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 30px;
   }
 
   .projects-header h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
+  }
+
+  .featured-left h2 {
+    font-size: 2.5rem;
+  }
+
+  .secondary-projects {
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   }
 
 }
 
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
 @media (max-width: 768px) {
+
+  .projects-section {
+    padding: 50px 15px;
+  }
+
+  .projects-header {
+    margin-bottom: 45px;
+  }
 
   .projects-header h1 {
     font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .projects-header p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .featured-project {
+    padding: 22px;
+    border-radius: 24px;
+    gap: 25px;
   }
 
   .featured-left h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .featured-left h4 {
+    font-size: 1rem;
+  }
+
+  .featured-left p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .feature-list {
+    gap: 10px;
+  }
+
+  .feature-item {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tech-stack {
+    gap: 8px;
+  }
+
+  .tech-stack span {
+    font-size: 13px;
+    padding: 8px 12px;
   }
 
   .project-buttons {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .github-btn,
+  .live-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 54px;
+    font-size: 15px;
+  }
+
+  .featured-right img {
+    border-radius: 16px;
   }
 
   .secondary-projects {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .secondary-card {
+    padding: 18px;
+  }
+
+  .secondary-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .secondary-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .card-image img {
+    height: 200px;
+  }
+
+}
+
+/* ========================= */
+/* SMALL PHONES */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+  .projects-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .featured-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .featured-project {
+    padding: 18px;
+  }
+
+  .tech-stack span {
+    font-size: 12px;
+  }
+
+  .github-btn,
+  .live-btn {
+    min-height: 50px;
+    font-size: 14px;
+  }
+
+  .card-image img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+  .secondary-card {
+    border-radius: 20px;
+  }
+
+}
+
+/* ========================= */
+/* VERY SMALL DEVICES */
+/* ========================= */
+
+@media (max-width: 360px) {
+
+  .projects-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .featured-left h2 {
+    font-size: 1.4rem;
+  }
+
+  .tech-stack {
+    justify-content: center;
+  }
+
+  .tech-stack span {
+    font-size: 11px;
+    padding: 7px 10px;
   }
 
 }

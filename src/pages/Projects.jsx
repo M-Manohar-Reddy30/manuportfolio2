@@ -266,7 +266,6 @@ export default function Projects() {
             </div>
 
             <div className="project-buttons">
-
               <a
                 href={project.code}
                 target="_blank"
@@ -274,6 +273,7 @@ export default function Projects() {
                 className="github-btn"
               >
                 <Github size={18} />
+                <span>GitHub</span>
               </a>
 
               <a
@@ -283,6 +283,7 @@ export default function Projects() {
                 className="live-btn"
               >
                 <ExternalLink size={18} />
+                <span>Live Demo</span>
               </a>
 
             </div>
