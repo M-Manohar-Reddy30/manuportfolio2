@@ -22,13 +22,13 @@
 }
 
 /* Photo */
-.photo-container { position: relative; flex: 0 0 380px; display: flex; justify-content: center; align-items: center; z-index: 1;}
+.photo-container { position: relative; flex: 0 1 380px; display: flex; justify-content: center; align-items: center; z-index: 1;}
 .photo-ring { position: absolute; width: 330px; height: 330px; border-radius: 50%; border: 2px dashed var(--accent); opacity: 0.3; }
 .photo-frame { position: relative; border-radius: 50%; overflow: hidden; width: 300px; height: 300px; box-shadow: 0 0 45px rgba(0,255,200,0.25); border: 3px solid var(--accent); z-index: 1; }
 .profile-photo { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 
 /* Info Section */
-.home-info { flex: 1; min-width: 360px; max-width: 700px; display: flex; flex-direction: column; justify-content: center; }
+.home-info { flex: 1; min-width: 0; max-width: 700px; display: flex; flex-direction: column; justify-content: center; }
 .home-title { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.4rem; }
 .home-name { background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent)); -webkit-background-clip: text; color: transparent; background-size: 200%; display: inline-block; }
 .typing-effect { font-size: 1.2rem; color: rgba(255,255,255,0.85); margin-top: 0.4rem; max-width: 95%; display: inline-block; overflow: hidden; white-space: nowrap; border-right: 0.15em solid var(--accent); animation: typing 3.5s steps(40,end) forwards, blink .8s infinite; }
@@ -66,4 +66,155 @@
   display: flex;
   gap: 1.5rem;
   justify-content: center; /* ensures icons are centered */
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN SYSTEM */
+/* ========================= */
+
+*{
+  box-sizing:border-box;
+}
+
+.home-section{
+  overflow-x:hidden;
+}
+
+/* Tablet */
+@media screen and (max-width:1024px){
+
+  .home-top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .home-info{
+    min-width:unset;
+    max-width:100%;
+    align-items:center;
+  }
+
+  .info-cards{
+    justify-content:center;
+  }
+
+}
+
+/* Mobile */
+@media screen and (max-width:768px){
+
+  .home-section{
+    padding:2rem 1rem;
+  }
+
+  .photo-container{
+    flex:none;
+  }
+
+  .photo-ring{
+    width:260px;
+    height:260px;
+  }
+
+  .photo-frame{
+    width:220px;
+    height:220px;
+  }
+
+  .home-title{
+    font-size:2rem;
+    text-align:center;
+  }
+
+  .typing-effect{
+    font-size:1rem;
+    white-space:normal;
+    border-right:none;
+    animation:none;
+    text-align:center;
+    line-height:1.6;
+  }
+
+  .home-info{
+    min-width:unset;
+    width:100%;
+    align-items:center;
+    text-align:center;
+  }
+
+  .info-cards{
+    width:100%;
+    justify-content:center;
+  }
+
+  .info-card{
+    width:100%;
+    max-width:350px;
+  }
+
+  .quick-links-title{
+    font-size:1.2rem;
+  }
+
+  .quick-links-list{
+    gap:1rem;
+  }
+
+  .quick-link-img{
+    width:45px;
+    height:45px;
+  }
+
+}
+
+/* Small Android Phones */
+@media screen and (max-width:480px){
+
+  .home-title{
+    font-size:1.7rem;
+  }
+
+  .photo-ring{
+    width:220px;
+    height:220px;
+  }
+
+  .photo-frame{
+    width:180px;
+    height:180px;
+  }
+
+  .typing-effect{
+    font-size:0.95rem;
+  }
+
+  .info-card{
+    padding:10px;
+    min-width:unset;
+  }
+
+  .quick-link-img{
+    width:40px;
+    height:40px;
+  }
+
+}
+
+/* Very Small Phones */
+@media screen and (max-width:360px){
+
+  .home-title{
+    font-size:1.5rem;
+  }
+
+  .photo-frame{
+    width:160px;
+    height:160px;
+  }
+
+  .photo-ring{
+    width:200px;
+    height:200px;
+  }
+
 }

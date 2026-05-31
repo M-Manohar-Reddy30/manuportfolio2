@@ -15,13 +15,6 @@ const instagramLogo = "/insta.png";
 const facebookLogo = "/facebook.png";
 
 export default function Home() {
-  const professions = [
-    'AI Enthusiast',
-    'Machine Learning Engineer',
-    "Deep Learning Expert",
-    'Computer Vision Researcher',
-    'Developer',
-  ]
 
   const quickLinks = [
     { img: githubLogo, title: 'GitHub', link: 'https://github.com/M-Manohar-Reddy30' },
@@ -63,7 +56,7 @@ export default function Home() {
           >
             <motion.img
               src={photo}
-              alt="Kunj Desai"
+              alt="M Manohar Reddy"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1 }}
