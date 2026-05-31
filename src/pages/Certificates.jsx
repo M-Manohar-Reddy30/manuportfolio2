@@ -91,8 +91,7 @@ export default function Certificates() {
     >
 
       <h1>
-        Certifications &
-        <span> Achievements</span>
+        Certifications & <span> Achievements</span>
       </h1>
 
       <p>
@@ -106,8 +105,10 @@ export default function Certificates() {
 
     {/* Statistics */}
 
+
     <div className="cert-stats">
 
+{/*}
       <motion.div
         className="stat-card"
         whileHover={{ y: -8 }}
@@ -132,7 +133,7 @@ export default function Certificates() {
         <span>Development</span>
       </motion.div>
 
-
+*/}
     </div>
 
     {/* Tabs */}

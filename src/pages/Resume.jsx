@@ -1,278 +1,380 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+  GraduationCap,
+  Briefcase,
+  Code2,
+  Award,
+  Sparkles,
+} from "lucide-react";
+
+import "../CSS/Resume.css";
+
+const stats = [
+  { value: "8.2", label: "CGPA" },
+  { value: "3+", label: "Major Projects" },
+  { value: "20+", label: "Technologies" },
+  { value: "2028", label: "Graduation" },
+];
+
+const skills = [
+  "Java",
+  "Python",
+  "C++",
+  "React",
+  "Next.js",
+  "FastAPI",
+  "Node.js",
+  "MongoDB",
+  "PostgreSQL",
+  "TensorFlow",
+  "PyTorch",
+  "OpenCV",
+  "ChromaDB",
+  "Gen AI",
+  "RAG",
+  "Git",
+  "GitHub",
+  "JWT",
+  "REST APIs",
+  "Tailwind CSS",
+];
+
+const projects = [
+  {
+    title: "SrmDocSafe-AI",
+    desc: "AI-powered Document Intelligence Platform with OCR, RAG Chat, Semantic Search and AI Summarization.",
+  },
+  {
+    title: "BookMyDoc",
+    desc: "Doctor Appointment Platform connecting patients with doctors through a seamless booking system.",
+  },
+  {
+    title: "DeepLearn",
+    desc: "Deep Learning demonstration platform showcasing image processing and real-time model inference.",
+  },
+];
 
 export default function Resume() {
   return (
-    <section className="container" style={{ padding: "60px 0" }}>
+    <section className="resume-section-main">
+
+      {/* Background Effects */}
+
+      <div className="resume-glow glow-1"></div>
+      <div className="resume-glow glow-2"></div>
+
       <motion.div
-        className="card"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
+        className="resume-wrapper"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        style={{
-          background: "#0b0b0b",
-          borderRadius: 16,
-          padding: "40px 30px",
-          color: "#e5e5e5",
-          boxShadow: "0 0 25px rgba(0, 153, 255, 0.1)",
-        }}
       >
-        <motion.h2
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          style={{ fontSize: 28, color: "#00b4ff", marginBottom: 12 }}
-        >
-          📄 Resume
-        </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          style={{ color: "#aaa", marginBottom: 25 }}
-        >
-          A quick glance at my journey.
-        </motion.p>
+        {/* Header */}
 
-        {/* Profile Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            flexWrap: "wrap",
-            gap: 20,
-            background: "rgba(255,255,255,0.03)",
-            padding: "24px 20px",
-            borderRadius: 12,
-          }}
+          className="resume-hero"
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
         >
-          <div>
-            <h3 style={{ fontSize: 24, color: "#00b4ff", marginBottom: 4 }}>
-              👨‍💻 M Manohar Reddy
-            </h3>
-            <p style={{ margintop: 10, fontSize: 15, color: "#ccc" }}>
-              2th Year B.Tech — Computer Science Engineering student specializing in Artificial Intelligence & Machine Learning | S.R.M University, Ktr
-            </p>
-            <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
-              📍 Kattankulathur, Chennai, Tamil Nadu
-            </p>
-            <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
-              ✉️ manoharreddyind@gmail.com | 📞 +91 9019916906
-            </p>
+
+          <div className="resume-badge">
+            <Sparkles size={16} />
+            AI Engineer Portfolio Resume
           </div>
 
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            style={{
-              background: "linear-gradient(135deg, #00b4ff44, #0b0b0b)",
-              borderRadius: 12,
-              padding: "14px 20px",
-              border: "1px solid rgba(255,255,255,0.1)",
-              maxWidth: 560,
-              fontSize: 14,
-              lineHeight: 1.6,
-            }}
-          >
-            <strong style={{ color: "#00b4ff" }}>Professional Summary:</strong>
-            <p style={{ marginTop: 6, color: "#ccc" }}>
-              2th-year B.Tech CSE student specializing in AI & ML, passionate about building 
-              real-world tech that actually solves problems. I love turning ideas into clean, functional products — 
-              from AI-powered tools to full-stack web apps. I’m constantly leveling up, exploring new technologies, 
-              and taking on projects that push me to grow. Looking to work with teams where I can contribute, learn fast, and create impact.
-            </p>
-          </motion.div>
+          <h1>
+            M Manohar Reddy
+          </h1>
+
+          <h3>
+            Artificial Intelligence Engineer • Full Stack Developer
+          </h3>
+
+          <p>
+            Passionate AI/ML Engineer and Full Stack Developer building
+            intelligent software solutions, modern web applications,
+            and real-world AI products that create measurable impact.
+          </p>
+
         </motion.div>
 
-        {/* Education Section with Border Box */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          style={{
-            marginTop: 40,
-            border: "1px solid rgba(255,255,255,0.1)",
-            borderRadius: 12,
-            padding: "20px 24px",
-            background: "rgba(255,255,255,0.03)",
-          }}
-        >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>
-            🎓 Education
-          </h4>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
-            <li>
-              <strong>B.Tech - CSE student specializing in AI & ML</strong> — S.R.M University, Kattankulathur
-               (2024–2028) <br />
-              <span style={{ color: "#aaa" }}>GPA: 8.2</span>
-            </li>
-            <li style={{ marginTop: 8 }}>
-              <strong>12th Board - PCMC</strong> — Narayana PU College, Ballari, Karnataka (KSEAB, 2024)
-              <br />
+        {/* Stats */}
 
-              <span style={{ color: "#aaa" }}>Percentage: 85%</span>
-            </li>
-            <li style={{ marginTop: 8 }}>
-              <strong>10th Board  - Narayana E-Techna School</strong> — Ballari, Karnataka (CBSE Board, 2022)
-              <br />
-              <span style={{ color: "#aaa" }}>Percentage: 73%</span>
-            </li>
-          </ul>
+        <div className="stats-grid">
+          {stats.map((item, index) => (
+            <motion.div
+              key={index}
+              className="stat-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <h2>{item.value}</h2>
+              <span>{item.label}</span>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Contact */}
+
+        <motion.div
+          className="contact-card"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
+
+          <div>
+            <Mail size={18} />
+            <span>manoharreddyind@gmail.com</span>
+          </div>
+
+          <div>
+            <Phone size={18} />
+            <span>+91 9019916906</span>
+          </div>
+
+          <div>
+            <MapPin size={18} />
+            <span>Chennai, Tamil Nadu</span>
+          </div>
+
+        </motion.div>
+
+        {/* Professional Summary */}
+
+        <motion.div
+          className="resume-card premium-card"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+
+          <h2>
+            <Briefcase size={22} />
+            Professional Summary
+          </h2>
+
+          <p>
+            Second-year B.Tech Computer Science Engineering student
+            specializing in Artificial Intelligence and Machine Learning
+            at SRM Institute of Science and Technology.
+            Experienced in building full-stack applications,
+            AI-powered platforms, and scalable backend systems.
+            Strong foundation in Data Structures, Algorithms,
+            System Design fundamentals, and modern software engineering.
+            Passionate about solving real-world problems through AI
+            and creating production-ready products.
+          </p>
+
+        </motion.div>
+                {/* Education */}
+
+        <motion.div
+          className="resume-card premium-card"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+
+          <h2>
+            <GraduationCap size={22} />
+            Education Journey
+          </h2>
+
+          <div className="timeline">
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+
+              <div>
+                <h3>
+                  B.Tech – Computer Science Engineering
+                  (AI & ML)
+                </h3>
+
+                <p>
+                  SRM Institute of Science and Technology,
+                  Kattankulathur
+                </p>
+
+                <span>
+                  2024 – 2028 • CGPA: 8.2
+                </span>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+
+              <div>
+                <h3>12th Board – PCMC</h3>
+
+                <p>
+                  Narayana PU College,
+                  Ballari, Karnataka
+                </p>
+
+                <span>
+                  2024 • 85%
+                </span>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+
+              <div>
+                <h3>10th Board – CBSE</h3>
+
+                <p>
+                  Narayana E-Techno School,
+                  Ballari, Karnataka
+                </p>
+
+                <span>
+                  2022 • 73%
+                </span>
+              </div>
+            </div>
+
+          </div>
+
         </motion.div>
 
         {/* Projects */}
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          style={{ marginTop: 40 }}
+          className="resume-card premium-card"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
         >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>💼 Projects</h4>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
-            <li>1️⃣ BookMyDoc : Doctor Appointment Platform — Full-Stack app built with React + Vite, Node.js + Express, MongoDB, Admin Panel & Cloud Deployments.</li>
-            <li>2️⃣ DeepLearn : A full-stack deep-learning demo combining a Next.js frontend with backend ML logic</li>
-          </ul>
+
+          <h2>
+            <Code2 size={22} />
+            Featured Projects
+          </h2>
+
+          <div className="resume-projects">
+
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                className="resume-project-card"
+                whileHover={{
+                  y: -8,
+                }}
+              >
+                <h3>{project.title}</h3>
+
+                <p>{project.desc}</p>
+              </motion.div>
+            ))}
+
+          </div>
+
         </motion.div>
 
         {/* Skills */}
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          style={{ marginTop: 40 }}
+          className="resume-card premium-card"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
         >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>⚙️ Skills</h4>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-            {[
-              "Python",
-              "C",
-              "C++",
-              "Java",
-              "HTML5",
-              "CSS3",
-              "Responsive UI",
-              "JavaScript (DOM)",
-              "React.js (Hooks)",
-              "Vite / CRA",
-              "Tailwind CSS",
-              "API Integration (REST)",
-              "Node.js",
-              "Express.js",
-              "Auth (JWT, bcrypt)",
-              "REST API Design",
-              "MongoDB + Mongoose",
-              "CRUD Operations",
-              "Indexing & Aggregations (basic)",
-              "MySQL",
-              "Vercel",
-              "Netlify",
-              "Render",
-              "Production Deployments",
-              "Git & GitHub",
-              "NLP/Yarn",
-              "VS Code",
-            ].map((skill) => (
+
+          <h2>
+            <Award size={22} />
+            Technical Skills
+          </h2>
+
+          <div className="skills-cloud">
+
+            {skills.map((skill, index) => (
               <motion.span
-                key={skill}
-                whileHover={{ scale: 1.1, backgroundColor: "rgba(0,180,255,0.3)" }}
-                style={{
-                  background: "rgba(255,255,255,0.05)",
-                  padding: "6px 12px",
-                  borderRadius: 8,
-                  fontSize: 13,
-                  color: "#ccc",
+                key={index}
+                whileHover={{
+                  scale: 1.08,
                 }}
               >
                 {skill}
               </motion.span>
             ))}
+
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4 }}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 30,
-            marginTop: 40,
-          }}
-        >
-          {[
-            { name: "🏆 LeetCode", link: "" },
-            { name: "💻 GitHub", link: "https://github.com/M-Manohar-Reddy30" },
-            { name: "💼 LinkedIn", link: "https://www.linkedin.com/in/manoharreddy-ai" },
-          ].map((site) => (
-            <motion.a
-              key={site.name}
-              href={site.link}
-              target="_blank"
-              rel="noreferrer"
-              whileHover={{ scale: 1.1, color: "#00b4ff" }}
-              style={{
-                color: "#ccc",
-                textDecoration: "none",
-                fontSize: 15,
-                fontWeight: 500,
-              }}
-            >
-              {site.name}
-            </motion.a>
-          ))}
+
         </motion.div>
 
-        {/* PDF Viewer */}
+        {/* Social Links */}
+
         <motion.div
+          className="resume-socials"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          style={{
-            marginTop: 50,
-            borderRadius: 12,
-            overflow: "hidden",
-            border: "1px solid rgba(255,255,255,0.1)",
-          }}
+          whileInView={{ opacity: 1 }}
         >
+
+          <a
+            href="https://github.com/M-Manohar-Reddy30"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Github size={20} />
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/manoharreddy-ai"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Linkedin size={20} />
+            LinkedIn
+          </a>
+
+        </motion.div>
+
+        {/* Resume Viewer */}
+
+        <motion.div
+          className="resume-viewer"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
+
           <iframe
             src="/resume.pdf"
-            title="M Manohar Reddy Resume"
-            style={{
-              width: "100%",
-              height: "650px",
-              border: "none",
-              background: "#111",
-            }}
+            title="Resume"
           />
+
         </motion.div>
 
         {/* Download Button */}
+
         <motion.a
           href="/resume.pdf"
           download
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          style={{
-            display: "inline-block",
-            marginTop: 20,
-            background: "#00b4ff",
-            color: "#fff",
-            padding: "10px 22px",
-            borderRadius: 8,
-            textDecoration: "none",
-            fontWeight: 500,
-            letterSpacing: 0.3,
+          className="download-btn"
+          whileHover={{
+            scale: 1.05,
+          }}
+          whileTap={{
+            scale: 0.95,
           }}
         >
-          ⬇️ Download Resume
+
+          <Download size={20} />
+          Download Resume
+
         </motion.a>
 
-
       </motion.div>
+
     </section>
   );
 }

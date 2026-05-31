@@ -3,12 +3,11 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import "../CSS/Skills.css";
 
+
 const stats = [
-  { number: 15, suffix: "+", label: "Technologies" },
-  { number: 3, suffix: "+", label: "Production Projects" },
-  { number: 8, suffix: "+", label: "Technical Domains" },
-  { number: 1, suffix: "+", label: "AI Platform Built" },
+  
 ];
+
 
 const techStack = [
   "Python",

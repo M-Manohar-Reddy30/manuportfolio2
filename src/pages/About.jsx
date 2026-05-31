@@ -1,249 +1,318 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaUniversity, FaSchool, FaGraduationCap } from "react-icons/fa";
+import {
+  FaUniversity,
+  FaSchool,
+  FaGraduationCap,
+  FaBrain,
+  FaCode,
+  FaRocket,
+} from "react-icons/fa";
 
-const AboutMe = () => {
+import "../CSS/About.css";
+
+const statsData = [
+  {
+    value: "8.2",
+    label: "Current GPA",
+    icon: <FaGraduationCap />,
+  },
+  {
+    value: "3+",
+    label: "Projects Built",
+    icon: <FaRocket />,
+  },
+  {
+    value: "20+",
+    label: "Technologies",
+    icon: <FaCode />,
+  },
+  {
+    value: "2028",
+    label: "Graduation",
+    icon: <FaBrain />,
+  },
+];
+
+const educationData = [
+  {
+    icon: <FaUniversity />,
+    title:
+      "B.Tech Computer Science Engineering (AI & ML)",
+    institute:
+      "SRM Institute of Science and Technology",
+    location:
+      "Kattankulathur, Chennai, Tamil Nadu",
+    details:
+      "2024 – 2028 | Currently Pursuing",
+    score:
+      "GPA: 8.2",
+  },
+
+  {
+    icon: <FaGraduationCap />,
+    title:
+      "Higher Secondary Education (12th Grade)",
+    institute:
+      "Narayana PU College",
+    location:
+      "Ballari, Karnataka",
+    details:
+      "Completed in 2024",
+    score:
+      "Percentage: 85%",
+  },
+
+  {
+    icon: <FaSchool />,
+    title:
+      "Secondary Education (10th Grade)",
+    institute:
+      "Narayana E-Techno School",
+    location:
+      "Ballari, Karnataka",
+    details:
+      "Completed in 2022",
+    score:
+      "Percentage: 73%",
+  },
+];
+export default function AboutMe() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        background: "radial-gradient(circle at top, #0d0d0d, #000)",
-        color: "white",
-        padding: "3rem 1rem",
-      }}
-    >
-      {/* --- About Me + Education Section --- */}
+    <section className="about-section">
+
+      {/* Aurora Background Effects */}
+
+      <div className="about-aurora aurora-one"></div>
+      <div className="about-aurora aurora-two"></div>
+      <div className="about-aurora aurora-three"></div>
+
+      {/* Hero Section */}
+
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-        style={{
-          width: "100%",
-          maxWidth: "1100px",
-          textAlign: "left",
-          marginTop: "1rem",
-          lineHeight: 1.8,
-          background: "rgba(255,255,255,0.04)",
-          padding: "3rem 3.5rem",
-          borderRadius: "18px",
-          boxShadow: "0 0 25px rgba(0,255,200,0.08)",
-          backdropFilter: "blur(10px)",
-        }}
+        className="about-hero"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        {/* --- Header --- */}
-        <h2
-          style={{
-            fontSize: "1.9rem",
-            marginBottom: "1.2rem",
-            background: "linear-gradient(90deg, var(--accent), var(--accent-2))",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-          }}
-        >
-          About Me
-        </h2>
+        <span className="about-badge">
+          AI Engineer • Full Stack Developer
+        </span>
 
-        {/* --- Description --- */}
-        <p
-          style={{
-            fontSize: "1.1rem",
-            color: "rgba(255,255,255,0.85)",
-            marginBottom: "1rem",
-          }}
-        >
-          Hi, I’m <strong>M Manohar Reddy</strong> an Computer Science Engineering student specializing in Artificial Intelligence & Machine Learning
-          driven by a strong passion for building real-world, impactful products. My work sits at the intersection of AI and full-stack development 
-          — I love taking ideas from concept to deployment, whether it's training ML models, engineering scalable backends, or designing clean, user-focused web interfaces.
-        </p>
-
-        <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.8)" }}>
-          I’ve built and deployed multiple production-ready projects using modern technologies like React, Node.js, Express, MongoDB, Tailwind, 
-          and cloud platforms such as Vercel, Render, and Netlify. I also work hands-on with Python, deep learning frameworks, and 
-          data engineering fundamentals to create practical AI solutions.
-        </p>
+        <h1>
+          Building Intelligent Systems
+          <br />
+          That Create Real Impact
+        </h1>
 
         <p>
-            Beyond coding, I’m someone who enjoys solving meaningful problems, learning fast, and 
-            continuously improving through real-world projects. I’m currently seeking an internship 
-            opportunity where I can contribute, grow, and work with teams building innovative software and AI systems.
+          I'm <strong>M Manohar Reddy</strong>, a Computer Science
+          Engineering student specializing in Artificial Intelligence
+          and Machine Learning at SRM Institute of Science and Technology.
+          My passion lies in combining AI, software engineering, and
+          product thinking to build solutions that solve meaningful
+          real-world problems.
         </p>
-
-        <p>
-            If you're looking for a developer who blends strong technical skills with curiosity, discipline, and a builder’s mindset — that’s exactly what I bring to the table.
-        </p>
-
-        
-
-        {/* --- Education Section --- */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          style={{ marginTop: "3rem" }}
-        >
-          <h3
-            style={{
-              fontSize: "1.6rem",
-              marginBottom: "1.5rem",
-              background:
-                "linear-gradient(90deg, var(--accent), var(--accent-2))",
-              WebkitBackgroundClip: "text",
-              color: "transparent",
-            }}
-          >
-            Education
-          </h3>
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.2rem",
-            }}
-          >
-            {/* --- Education Card 1 --- */}
-            <motion.div
-              whileHover={{
-                scale: 1.02,
-                boxShadow: "0 0 25px rgba(0,255,200,0.15)",
-              }}
-              transition={{ duration: 0.3 }}
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                borderRadius: "14px",
-                padding: "1.5rem 2rem",
-                border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "0 0 15px rgba(0,255,200,0.05)",
-                display: "flex",
-                alignItems: "center",
-                gap: "1.2rem",
-              }}
-            >
-              <FaUniversity size={40} color="var(--accent)" />
-              <div>
-                <h4
-                  style={{
-                    color: "var(--accent)",
-                    marginBottom: "0.4rem",
-                    fontSize: "1.25rem",
-                  }}
-                >
-                  B.Tech in Computer Science Engineering student specializing in Artificial Intelligence & Machine Learning
-                </h4>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.85)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  <strong>SRM Institute of Science and Technology</strong> — Kattankulathur,
-                  Chennai, Tamil Nadu
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  2th Year (Pursuing) | GPA: 8.2
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>2024 – 2028</p>
-              </div>
-            </motion.div>
-
-            {/* --- Education Card 2 --- */}
-            <motion.div
-              whileHover={{
-                scale: 1.02,
-                boxShadow: "0 0 25px rgba(0,255,200,0.15)",
-              }}
-              transition={{ duration: 0.3 }}
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                borderRadius: "14px",
-                padding: "1.5rem 2rem",
-                border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "0 0 15px rgba(0,255,200,0.05)",
-                display: "flex",
-                alignItems: "center",
-                gap: "1.2rem",
-              }}
-            >
-              <FaGraduationCap size={38} color="var(--accent)" />
-              <div>
-                <h4
-                  style={{
-                    color: "var(--accent)",
-                    marginBottom: "0.4rem",
-                    fontSize: "1.25rem",
-                  }}
-                >
-                  Higher Secondary Education (12th Grade)
-                </h4>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.85)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  <strong>Narayana pu college</strong> — Ballari, karnataka              
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  KSEAB | Percentage: 85%
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2024</p>
-              </div>
-            </motion.div>
-
-            {/* --- Education Card 3 --- */}
-            <motion.div
-              whileHover={{
-                scale: 1.02,
-                boxShadow: "0 0 25px rgba(0,255,200,0.15)",
-              }}
-              transition={{ duration: 0.3 }}
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                borderRadius: "14px",
-                padding: "1.5rem 2rem",
-                border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "0 0 15px rgba(0,255,200,0.05)",
-                display: "flex",
-                alignItems: "center",
-                gap: "1.2rem",
-              }}
-            >
-              <FaSchool size={36} color="var(--accent)" />
-              <div>
-                <h4
-                  style={{
-                    color: "var(--accent)",
-                    marginBottom: "0.4rem",
-                    fontSize: "1.25rem",
-                  }}
-                >
-                  Secondary Education (10th Grade)
-                </h4>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.85)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  <strong>Narayan E-Techno School</strong> — Ballari,
-                  karnataka
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  CBSE Board | Percentage: 73%
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2022</p>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
       </motion.div>
-    </div>
-  );
-};
 
-export default AboutMe;
+      {/* Stats Section */}
+
+      <motion.div
+        className="stats-grid"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.7 }}
+      >
+        {statsData.map((item, index) => (
+          <motion.div
+            key={index}
+            className="stat-card"
+            whileHover={{
+              y: -8,
+              scale: 1.03,
+            }}
+          >
+            <div className="stat-icon">
+              {item.icon}
+            </div>
+
+            <h2>{item.value}</h2>
+
+            <p>{item.label}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* About Story */}
+
+      <motion.div
+        className="about-story"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <h2>Who I Am</h2>
+
+        <p>
+          My journey into technology started with curiosity and evolved
+          into a passion for creating impactful products. I enjoy solving
+          challenging problems through code and transforming ideas into
+          practical software solutions.
+        </p>
+
+        <p>
+          Over the years I have explored full-stack development,
+          artificial intelligence, machine learning, backend engineering,
+          cloud deployment, and modern frontend technologies. I enjoy
+          building products from scratch — from system design and APIs
+          to beautiful user interfaces.
+        </p>
+
+        <p>
+          I believe that technology should not only be powerful but also
+          accessible, scalable, and user-centric. That's the mindset I
+          bring into every project I build.
+        </p>
+      </motion.div>
+
+      {/* What I Build */}
+
+      <motion.div
+        className="build-section"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <h2>What I Build</h2>
+
+        <div className="build-grid">
+
+          <div className="build-card">
+            <FaBrain className="build-icon" />
+            <h3>Artificial Intelligence</h3>
+            <p>
+              Machine Learning, Deep Learning,
+              Computer Vision, GenAI, RAG Systems,
+              LLM Applications and AI-powered products.
+            </p>
+          </div>
+
+          <div className="build-card">
+            <FaCode className="build-icon" />
+            <h3>Full Stack Development</h3>
+            <p>
+              React, Next.js, FastAPI, Node.js,
+              MongoDB, PostgreSQL and scalable
+              web application development.
+            </p>
+          </div>
+
+          <div className="build-card">
+            <FaRocket className="build-icon" />
+            <h3>Production Products</h3>
+            <p>
+              End-to-end deployment using
+              Vercel, Render, cloud databases,
+              authentication systems and APIs.
+            </p>
+          </div>
+
+        </div>
+      </motion.div>
+            {/* Education Timeline */}
+
+      <motion.div
+        className="education-section"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <h2>Education Journey</h2>
+
+        <div className="education-timeline">
+
+          {educationData.map((item, index) => (
+            <motion.div
+              key={index}
+              className="education-card"
+              whileHover={{
+                scale: 1.02,
+              }}
+            >
+              <div className="education-icon">
+                {item.icon}
+              </div>
+
+              <div className="education-content">
+                <h3>{item.title}</h3>
+
+                <h4>{item.institute}</h4>
+
+                <p>{item.location}</p>
+
+                <span>{item.details}</span>
+
+                <div className="education-score">
+                  {item.score}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+
+        </div>
+      </motion.div>
+
+      {/* Career Vision */}
+
+      <motion.div
+        className="vision-section"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <h2>Career Vision</h2>
+
+        <p>
+          My goal is to become a highly skilled
+          AI Engineer and Full Stack Developer,
+          contributing to innovative products
+          that impact millions of users.
+        </p>
+
+        <p>
+          I am actively building expertise in
+          Artificial Intelligence, Machine Learning,
+          Deep Learning, Generative AI, System Design,
+          and Modern Software Engineering.
+        </p>
+
+        <p>
+          Through continuous learning, internships,
+          open-source contributions, and production-grade
+          projects, I aim to secure opportunities at
+          top technology companies and contribute to
+          next-generation intelligent systems.
+        </p>
+      </motion.div>
+
+      {/* Closing CTA */}
+
+      <motion.div
+        className="about-footer"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.7 }}
+      >
+        <h3>
+          Always Learning. Always Building.
+        </h3>
+
+        <p>
+          Turning ideas into intelligent products
+          through code, creativity, and innovation.
+        </p>
+      </motion.div>
+
+    </section>
+  );
+}
