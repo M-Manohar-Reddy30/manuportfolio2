@@ -69,7 +69,7 @@ export default function Navbar() {
           <div style={{ display: "flex", flexDirection: "column" }}>
             <h1 style={{ margin: 0, fontSize: 14 }}>Manohar Reddy</h1>
             <div style={{ fontSize: 12, color: "var(--muted)" }}>
-              AI-ML Developer | Full-Stack Developer
+            Software Engineer | MERN Stack Developer | AI/ML Enthusiast
             </div>
           </div>
         </div>
