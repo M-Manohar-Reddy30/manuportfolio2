@@ -96,7 +96,7 @@ export default function AboutMe() {
         transition={{ duration: 0.8 }}
       >
         <span className="about-badge">
-          AI Engineer • Full Stack Developer
+          Software Engineer • MERN Stack Developer • AI/ML Enthusiast
         </span>
 
         <h1>
