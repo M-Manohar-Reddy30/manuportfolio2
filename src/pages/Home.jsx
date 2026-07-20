@@ -73,19 +73,23 @@ export default function Home() {
           className="home-info"
         >
           <h1 className="home-title">
-            Hi, I’m{' '}
-            <motion.span
-              animate={{ backgroundPositionX: ['0%', '200%'] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-              className="home-name"
-            >
-              M Manohar Reddy
-            </motion.span>
-          </h1>
+           Hi, I'm{' '}
+           <motion.span
+            animate={{ backgroundPositionX: ['0%', '200%'] }}
+            transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
+            className="home-name"
+           >
+            Mulla Manohar Reddy
+          </motion.span>
+         </h1>
 
           {/* Typing Animated Text */}
           <p className="typing-effect">
-            Software Engineer Aspirant | MERN Stack Developer | AI/ML Enthusiast
+            AI/ML Engineering Student at SRM Institute of Science and Technology | Full Stack Developer | MERN Stack Developer | Java Developer
+          </p>
+
+          <p className="home-description">
+           I am Mulla Manohar Reddy, an AI/ML Engineering student at SRM Institute of Science and Technology (SRMIST), passionate about Artificial Intelligence, Machine Learning, Full Stack Web Development, Java, MERN Stack, and building innovative software solutions.
           </p>
 
          {/*  Profession Tags *
